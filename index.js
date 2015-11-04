@@ -1,13 +1,16 @@
 
-
 var sentinel = require('redis-sentinel');
 
+var endpoints = [];
+
+for ( var i = 2 ; i < process.argv.length ; i = i + 2 ){
+
+    endpoints.push({host: process.argv[i], port: process.argv[i+1]});
+
+}
+
 // List the sentinel endpoints
-var endpoints = [
-    {host: '127.0.0.1', port: 26379},
-    {host: '127.0.0.1', port: 26380},
-    {host: '127.0.0.1', port: 26381}
-];
+console.log(endpoints);
 
 //tcp://10.233.194.227:26379,tcp://10.233.194.251:26379,tcp://10.233.194.252:26379
 

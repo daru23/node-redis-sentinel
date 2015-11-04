@@ -28,13 +28,13 @@ var Sentinel = sentinel.Sentinel(endpoints);
 var masterClient = Sentinel.createClient(masterName, opts);
 
 
-masterClient.on("message", function (channel, message) {
+redisClient.on("message", function (channel, message) {
     console.log('Message received!');
     console.log(message)
 });
 
 
-masterClient.subscribe("testChannel");
+redisClient.subscribe("testChannel");
 
 /* Send test message */
-masterClient.publish("testChannel", "This is a test for sentinel");
+//masterClient.publish("testChannel", "This is a test for sentinel");

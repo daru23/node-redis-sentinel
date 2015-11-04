@@ -4,9 +4,9 @@ var sentinel = require('redis-sentinel');
 
 // List the sentinel endpoints
 var endpoints = [
-    {host: '10.233.194.227', port: 26379},
-    {host: '10.233.194.251', port: 26379},
-    {host: '10.233.194.252', port: 26379}
+    {host: '127.0.0.1', port: 26379},
+    {host: '127.0.0.1', port: 26380},
+    {host: '127.0.0.1', port: 26381}
 ];
 
 //tcp://10.233.194.227:26379,tcp://10.233.194.251:26379,tcp://10.233.194.252:26379

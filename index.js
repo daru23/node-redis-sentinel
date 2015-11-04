@@ -16,6 +16,7 @@ var masterName = 'redismaster';
 
 // masterName and opts are optional - masterName defaults to 'mymaster'
 var redisClient = sentinel.createClient(endpoints, masterName, opts);
+var redisClient2 = sentinel.createClient(endpoints, masterName, opts);
 
 // redisClient is a normal redis client, except that if the master goes down
 // it will keep checking the sentinels for a new master and then connect to that.
@@ -37,4 +38,4 @@ redisClient.on("message", function (channel, message) {
 redisClient.subscribe("testChannel");
 
 /* Send test message */
-redisClient.publish("testChannel", "This is a test for sentinel");
+redisClient2.publish("testChannel", "This is a test for sentinel");

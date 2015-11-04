@@ -10,7 +10,7 @@ for ( var i = 2 ; i < process.argv.length ; i = i + 2 ){
 }
 
 // List the sentinel endpoints
-console.log(endpoints);
+//console.log(endpoints);
 
 //tcp://10.233.194.227:26379,tcp://10.233.194.251:26379,tcp://10.233.194.252:26379
 

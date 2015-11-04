@@ -37,4 +37,4 @@ redisClient.on("message", function (channel, message) {
 redisClient.subscribe("testChannel");
 
 /* Send test message */
-//masterClient.publish("testChannel", "This is a test for sentinel");
+redisClient.publish("testChannel", "This is a test for sentinel");

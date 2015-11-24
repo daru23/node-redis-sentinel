@@ -28,8 +28,8 @@ var redisClient2 = sentinel.createClient(endpoints, masterName, opts);
 // Anything that doesn't, won't.
 
 // An equivalent way of doing the above (if you don't want to have to pass the endpoints around all the time) is
-var Sentinel = sentinel.Sentinel(endpoints);
-var masterClient = Sentinel.createClient(masterName, opts);
+//var Sentinel = sentinel.Sentinel(endpoints);
+//var masterClient = Sentinel.createClient(masterName, opts);
 
 
 redisClient.on("message", function (channel, message) {
